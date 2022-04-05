@@ -1,0 +1,12 @@
+SET QUOTED_IDENTIFIER ON
+GO
+SET ANSI_NULLS ON
+GO
+CREATE TRIGGER [tr_DBA_ChangeLog]
+					  ON DATABASE
+					  AFTER DDL_DATABASE_LEVEL_EVENTS
+					  AS
+					  SET NOCOUNT ON
+					  INSERT INTO dbo.DBA_ChangeLog (EventData)
+					  VALUES (eventdata())
+GO
