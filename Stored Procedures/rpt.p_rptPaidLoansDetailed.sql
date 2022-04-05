@@ -11,6 +11,13 @@ BEGIN
 --Creating Temp Table for LastPaymentApply Column
 --msh please, format all create table statements for readability
 --kk Formatted the create table statements on February 14, 2022
+
+CREATE TABLE #Test
+(
+ id int
+ 
+ )
+
 CREATE TABLE #LastPayment
 	(
 		UserID int,
